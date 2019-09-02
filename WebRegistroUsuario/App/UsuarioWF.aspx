@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/App/Site1.Master" AutoEventWireup="true" CodeBehind="UsuarioWF.aspx.cs" Inherits="WebRegistroUsuario.App.UsuarioWF" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <!-- Content page-->
@@ -26,32 +27,33 @@
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="" runat="server">
                                           
-                                          
-                                            <section  class = "row center">
-                                                <div class="col-lg-1 p-0">
-                                                        <asp:LinkButton ID="BuscarLinkButton" CssClass="btn btn-info mt-4" runat="server" OnClick="BuscarLinkButton_Click">
-                                                        <span class="fas fa-search"></span>Buscar
-                                                        </asp:LinkButton>
-                                                          
-                                                      </div>
-                                            </section>
                                                 
+                                            <div class="container">
+		                                        <div class="row">
+			                                        <div class="col-md-6 col-md-offset-2">
+
+                                                        <asp:Button ID="Buscar" runat="server"  Text="Buscar" class="btn btn-info btn-raised btn-sm-8 pull-right" OnClick="BuscarLinkButton_Click"/>
+
+			                                        </div>
+		                                        </div>
+	                                        </div>
                                              
 									    	<div class="form-group label-floating">
 											  <asp:Label ID="Label1" runat="server" class="control-label" Text="Id"></asp:Label>
-											   <asp:TextBox ID="UsuarioId" runat="server" class="form-control"  ></asp:TextBox>
+											   <asp:TextBox ID="UsuarioId" runat="server" class="form-control" type = " number " min ="0"  ></asp:TextBox>
 											</div>
                                    
                                             <div class="form-group label-floating">
 											  <asp:Label ID="Label2" runat="server" class="control-label" Text="Nombres"></asp:Label>
-											   <asp:TextBox ID="NombresTextBox" runat="server" class="form-control"  ></asp:TextBox>
+											   <asp:TextBox ID="NombresTextBox" runat="server" class="form-control" MaxLength = " 200 " ></asp:TextBox>
 											</div>
 
                                             <div class="form-group label-floating">
 											  <asp:Label ID="Label3" runat="server" class="control-label" Text="Email"></asp:Label>
-											   <asp:TextBox ID="EmailTextBox" runat="server" class="form-control"  ></asp:TextBox>
+											   <asp:TextBox ID="EmailTextBox" runat="server" class="form-control" placeholder="Example@Example.com"  ></asp:TextBox>
 											</div>
-                                                                                      <div class="form-group">                                            <label class="control-label">Nivel de Usuario</label>                                            <asp:DropDownList ID="DropDownList" runat="server" Width="904px">
+
+                                                                       <div class="form-group label-floating">                                            <asp:Label Id="Drop" runat="server" class="control-label" Text="Nivel de Usuario"></asp:Label>                                            <asp:DropDownList ID="DropDownList" CssClass="form-control" runat="server" Width="870px">
                                             <asp:ListItem>Administrador</asp:ListItem>
                                             <asp:ListItem>Venta</asp:ListItem>
                                             <asp:ListItem>Contabilidad</asp:ListItem>                                            </asp:DropDownList>                                            </div>                                            <div class="form-group label-floating">
@@ -61,7 +63,7 @@
 
                                             <div class="form-group label-floating">
 											  <asp:Label ID="Label5" runat="server" class="control-label" Text="Clave"></asp:Label>
-											   <asp:TextBox ID="ClaveTextBox" runat="server" class="form-control"  ></asp:TextBox>
+											   <asp:TextBox ID="ClaveTextBox" runat="server" class="form-control" Type="password"  ></asp:TextBox>
 											</div>
 
                                             <div class="form-group label-floating">
@@ -69,8 +71,9 @@
 											   <asp:TextBox ID="ConfirmarTextBox" runat="server" class="form-control"  ></asp:TextBox>
 											</div>
 										    <p class="text-center">
-                                                <asp:Button ID="Guardar" runat="server"  Text="Gurdar" class="btn btn-info btn-raised btn-sm" OnClick="Guardar_Click"/>
-                                                 <asp:Button ID="Eliminar" runat="server"  Text="Eliminar" class="btn btn-success btn-raised btn-sm" OnClick="Eliminar_Click" />
+                                                <asp:Button ID="Nuevo" runat="server"  Text="Nuevo" class="btn btn-info btn-raised btn-sm" OnClick="Limpiar_Click" />
+                                                <asp:Button ID="Guardar" runat="server"  Text="Gurdar" class="btn btn-success btn-raised btn-sm" OnClick="Guardar_Click"/>
+                                                 <asp:Button ID="Eliminar" runat="server"  Text="Eliminar" class="btn btn-danger btn-raised btn-sm" OnClick="Eliminar_Click" />
                                             </p>
 									    </form>
 									</div>

@@ -14,6 +14,9 @@ namespace WebRegistroUsuario.App
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UsuarioId.Text = "0";
+            DropDownList.Text = string.Empty;
+
 
         }
         void Limpiar()
@@ -22,8 +25,10 @@ namespace WebRegistroUsuario.App
             NombresTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
             NombresTextBox.Text = string.Empty;
+            UsuarioTextBox.Text = string.Empty;
             ClaveTextBox.Text = string.Empty;
             ConfirmarTextBox.Text = string.Empty;
+            DropDownList.Text = string.Empty;
 
         }
         private Usuarios LLenaClase()
@@ -32,6 +37,7 @@ namespace WebRegistroUsuario.App
             usuarios.UsuarioId = Convert.ToInt32(UsuarioId.Text);
             usuarios.Nombres = NombresTextBox.Text;
             usuarios.Email = EmailTextBox.Text;
+            usuarios.NivelUsuario = Convert.ToInt32(DropDownList.SelectedValue);
             usuarios.Usuario = UsuarioTextBox.Text;
             usuarios.Clave = ClaveTextBox.Text;
             usuarios.Clave = ConfirmarTextBox.Text;
@@ -131,6 +137,10 @@ namespace WebRegistroUsuario.App
             else
                 ClientScript.RegisterStartupScript(this.GetType(), "Pop", "SinExito()", true);
 
+        }
+        protected void Limpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

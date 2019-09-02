@@ -64,7 +64,7 @@
                     </a>
                     <ul class="list-unstyled full-box">
                         <li>
-                            <a href="UsuarioWF.aspx"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Usuarios</a>
+                            <a href="cUsuarioWF.aspx"><i class="zmdi zmdi-timer zmdi-hc-fw"></i> Usuarios</a>
                         </li>
                        
                     </ul>

@@ -77,6 +77,7 @@
     <Content Include="App\assets\img\avatar.jpg" />
     <Content Include="App\assets\img\loginFont.jpg" />
     <Content Include="App\assets\img\sideBar-font.jpg" />
+    <Content Include="App\cUsuarioWF.aspx" />
     <Content Include="App\css\bootstrap-material-design.min.css" />
     <Content Include="App\css\bootstrap.min.css" />
     <Content Include="App\css\jquery.mCustomScrollbar.css" />
@@ -101,6 +102,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\cUsuarioWF.aspx.cs">
+      <DependentUpon>cUsuarioWF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\cUsuarioWF.aspx.designer.cs">
+      <DependentUpon>cUsuarioWF.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,6 +162,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App\Consulta\" />
+    <Folder Include="App\Registro\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

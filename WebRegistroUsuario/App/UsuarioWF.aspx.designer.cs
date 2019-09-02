@@ -13,13 +13,13 @@ namespace WebRegistroUsuario.App {
     public partial class UsuarioWF {
         
         /// <summary>
-        /// BuscarLinkButton control.
+        /// Buscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BuscarLinkButton;
+        protected global::System.Web.UI.WebControls.Button Buscar;
         
         /// <summary>
         /// Label1 control.
@@ -74,6 +74,15 @@ namespace WebRegistroUsuario.App {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
+        
+        /// <summary>
+        /// Drop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Drop;
         
         /// <summary>
         /// DropDownList control.
@@ -137,6 +146,15 @@ namespace WebRegistroUsuario.App {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmarTextBox;
+        
+        /// <summary>
+        /// Nuevo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Nuevo;
         
         /// <summary>
         /// Guardar control.
